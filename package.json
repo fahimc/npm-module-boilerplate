@@ -1,0 +1,23 @@
+{
+  "name": "npm-module-boilerplate",
+  "version": "1.0.0",
+  "description": "A versatile boilerplate for seamlessly building npm modules supporting both ESM and CommonJS formats, designed to streamline the development process and ensure compatibility across different module systems.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run fixup",
+    "fixup": "node util/fixup.js",
+    "test": "jest"
+  },
+  "author": "Fahim Chowdhury <fahim.chowdhury1985@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}
